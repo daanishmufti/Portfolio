@@ -57,9 +57,17 @@ footer {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: space-between; /* Space between text and social icons */
     height: 50px;
     box-sizing: border-box;
+    flex-wrap: wrap;  /* Allows content to wrap on smaller screens */
+}
+
+footer .footer-text {
+    max-width: 70%; /* Limit width for text, preventing it from getting too narrow */
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    overflow: hidden; /* Hide overflow if necessary */
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
 }
 
 footer img.footer-img {
@@ -78,16 +86,12 @@ footer p {
     margin-left: -5px;
 }
 
-/* Social icons styles */
 footer .social-icons {
     display: flex;
     gap: 15px;
-    margin-left: auto;
-    margin-top: 5px;
+    margin-left: auto; /* Push icons to the right */
     justify-content: flex-end;
-    position: absolute;
-    right: 20px;
-    bottom: 1px;
+    position: relative;
 }
 
 footer .social-icons a {
@@ -101,7 +105,6 @@ footer .social-icons a:hover {
     color: #00ff99;
     transform: scale(1.1);
 }
-
 
 /* Projects Section */
 .projects {
@@ -165,46 +168,6 @@ footer .social-icons a:hover {
     top: -40px; /* Move the title upwards */
 }
 
-/* Media Queries for responsiveness */
-
-/* Medium screens (Tablet) */
-@media (max-width: 768px) {
-    .projects {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
-    }
-
-    .project-box {
-        max-width: 90%; /* Adjust box width to be 90% of the container on medium screens */
-        min-width: 230px; /* Ensure the box doesn’t get too small */
-    }
-}
-
-/* Small screens (Mobile) */
-@media (max-width: 480px) {
-    .projects {
-        grid-template-columns: 1fr; /* 1 column on mobile screens */
-    }
-
-    .project-box {
-        max-width: 90%; /* Box takes up 90% width on small screens */
-        min-width: 200px; /* Ensure the box doesn't get too small */
-    }
-}
-
-
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-    .projects {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .projects {
-        grid-template-columns: 1fr; /* 1 column on mobile screens */
-    }
-}
-
 /* Header and footer styles */
 h1 {
     text-align: center;
@@ -247,3 +210,109 @@ header nav ul li a:hover {
     border-color: #00ff99;
     box-shadow: 0 0 10px rgba(0, 255, 153, 0.5);
 }
+
+/* Footer Layout Fix */
+footer {
+    background-color: #333; /* Dark background for footer */
+    color: white;
+    text-align: left;
+    padding: 3px 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between text and social icons */
+    height: 50px;
+    box-sizing: border-box;
+    flex-wrap: wrap;  /* Allows content to wrap on smaller screens */
+}
+
+footer .footer-text {
+    max-width: 70%; /* Limit width for text, preventing it from getting too narrow */
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    overflow: hidden; /* Hide overflow if necessary */
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+}
+
+footer img.footer-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #00ff99;
+    padding: 2px;
+    box-sizing: border-box;
+    margin-top: 2px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+    margin-left: -5px;
+}
+
+footer .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-left: auto; /* Push icons to the right */
+    justify-content: flex-end;
+    position: relative;
+}
+
+footer .social-icons a {
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #00ff99;
+    transform: scale(1.1);
+}
+
+
+@media screen and (max-width: 1024px) {
+    .project-box {
+        width: 45%;
+    }
+
+    /* Reduce text size for smaller screens */
+    h1 {
+        font-size: 40px;
+    }
+
+    p.intro {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .project-box {
+        width: 100%;
+    }
+
+    .projects {
+        justify-content: center;
+    }
+
+    /* Significantly reduce text size on very small screens */
+    h1 {
+        font-size: 30px;
+    }
+
+    p.intro {
+        font-size: 12px;
+        margin-top: 20px;
+    }
+
+    footer p {
+        font-size: 10px;
+    }
+
+    .social-icons a {
+        font-size: 10px;
+    }
+}
+
