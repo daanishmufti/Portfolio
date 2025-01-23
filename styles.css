@@ -11,8 +11,8 @@ body {
     background-image: url('front.jpeg'); /* Ensure you have the correct path for your background image */
     background-size: cover;
     background-position: center center;
-    background-attachment: fixed; /* This keeps the background fixed when scrolling */
-    padding-top: 80px;
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    padding-top: 80px;  /* Adjusted to give space for the fixed header */
     padding-bottom: 60px;
     min-height: 100vh;
 }
@@ -26,13 +26,14 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10; /* Ensure header is above the background */
-    box-sizing: border-box; /* Prevents padding from affecting width */
+    z-index: 10; /* Ensures header is above the background */
+    box-sizing: border-box;
 }
 
 header nav ul {
     list-style: none;
     padding: 0;
+    display: inline-block;
 }
 
 header nav ul li {
@@ -41,142 +42,228 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: white;
+    color: white; /* Corrected color */
     text-decoration: none;
     font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #00ff99;
+    color: #333;
+    border-color: #00ff99;
+    box-shadow: 0 0 10px rgba(0, 255, 153, 0.5);
 }
 
 footer {
-    background-color: #333; /* Dark background for footer */
+    background-color: #333;
     color: white;
-    text-align: left; /* Align text to the left */
-    padding: 3px 10px; /* Keep padding small to maintain footer height */
+    text-align: left;
+    padding: 3px 10px;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    display: flex; /* Use flexbox to arrange the image and text in a row */
-    align-items: center; /* Vertically center the items */
-    justify-content: left; /* Align everything to the left */
-    height: 50px; /* Fixed height for the footer */
-    box-sizing: border-box; /* Ensure padding does not affect size */
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 50px;
+    box-sizing: border-box;
 }
 
 footer img.footer-img {
-    width: 30px;         /* Set image size */
-    height: 30px;        /* Keep the image square */
-    border-radius: 50%;  /* Make the image circular */
-    border: 2px solid #00ff99; /* Thin green border */
-    padding: 2px;        /* Adds space between the image and the border */
-    box-sizing: border-box; /* Ensures the border is included in the total size of the element */
-    margin-top: 2px;     /* Slightly move the image upwards */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #00ff99;
+    padding: 2px;
+    box-sizing: border-box;
+    margin-top: 2px;
 }
 
 footer p {
     margin: 0;
-    font-size: 16px; /* Smaller font size for minimal footer height */
-    margin-left: -5px; /* Small gap between the image and the text */
+    font-size: 16px;
+    margin-left: -5px;
 }
 
 /* Social icons styles */
 footer .social-icons {
-    display: flex; /* Use flexbox */
-    gap: 15px; /* Space between icons */
-    margin-left: auto; /* Push the icons to the right */
-    margin-top: 5px; /* Add a small gap at the top */
-    justify-content: flex-end; /* Align to the right of the container */
-    position: absolute; /* Absolutely position the icons */
-    right: 20px; /* Place icons 20px from the right */
-    bottom: 1px; /* Place icons 10px from the bottom of the footer */
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+    margin-top: 5px;
+    justify-content: flex-end;
+    position: absolute;
+    right: 20px;
+    bottom: 1px;
 }
-
 
 footer .social-icons a {
     color: #fff;
-    font-size: 30px; /* Set a consistent icon size */
+    font-size: 30px;
     text-decoration: none;
-    transition: transform 0.3s ease; /* Smooth scale transition */
+    transition: transform 0.3s ease;
 }
 
 footer .social-icons a:hover {
-    color: #00ff99; /* Neon green on hover */
-    transform: scale(1.1); /* Slightly enlarge the icon */
-}
-/* Main Section - Scrollable content area */
-main {
-
+    color: #00ff99;
+    transform: scale(1.1);
 }
 
-/* Gradient Description Box */
-section {
-    padding: 2rem;
+/* Projects Section */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 40px;
+    justify-items: center;
 }
 
-.gradient-description {
-    background: linear-gradient(45deg, #1a1a1a, #333333); /* Dark gradient for a techy look */
-    color: #00ff99; /* Neon green-like text color for a tech feel */
-    border-radius: 12px;
-    padding: 20px;
-    text-align: left; /* Align text to the left for a modern feel */
-    max-width: 700px; /* Increase max-width for a wider box */
-    margin: 20px auto; /* Center the box */
-    box-shadow: 0 4px 10px rgba(0, 255, 153, 0.2); /* Soft neon glow effect */
-    border: 1px solid #00ff99; /* Border with the same neon green */
+.project-box {
+    background-color: rgba(51, 51, 51, 0.8);
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    width: 100%; /* Ensures the box takes up the full width of its grid column */
+    max-width: 400px; /* Maximum width for consistency */
+    min-width: 400px; /* Minimum width to ensure the box is not too small */
+    height: 620px;
+    box-shadow: 0 4px 10px rgba(0, 255, 153, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure content is spaced out */
 }
 
-.gradient-description h4 {
-    font-size: 1.6em;
-    font-weight: bold;
-    margin-bottom: 15px;
-    font-family: 'Courier New', Courier, monospace; /* Monospace font for a tech look */
-    text-transform: uppercase; /* Uppercase for a more sleek and futuristic appearance */
-    letter-spacing: 1px; /* Space between the letters for a more technical feel */
+.project-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 255, 153, 0.5);
 }
 
-.gradient-description p {
+/* Image inside the project box */
+.project-box img {
+    width: 100%; /* Make the image fill the width of the box */
+    height: 350px; /* Fixed height for uniform image size */
+    object-fit: cover; /* Ensures the image covers the space without distortion */
+    border-radius: 10px; /* Curved corners */
+    margin-bottom: -15px; /* Space between image and text */
+}
+
+/* Title inside the project box */
+.project-box h3 {
+    font-size: 1.5em;
+    color: #00ff99;
+    margin-bottom: -140px;
+    line-height: 1.2;
+    height: 45px; /* Fixed height for the title */
+    position: relative;
+    top: -60px; /* Move the title upwards */
+}
+
+/* Description inside the project box */
+.project-box p {
+    font-size: 1.1em;
+    color: #f5f5f5;
+    line-height: 1.5;
+    height: 75px; /* Set a fixed height for the description */
+    overflow: hidden; /* Hide text that overflows if the description is too long */
+    position: relative;
+    top: -40px; /* Move the title upwards */
+}
+
+
+
+/* Header and footer styles */
+h1 {
+    text-align: center;
+    margin-top: -40px;
+    font-size: 3em;
+    color: #00ff99;
+    text-shadow: 0 0 10px #00ff99, 0 0 10px #00ff99;
+}
+
+p {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 1.2em;
+    line-height: 1.9;
+}
+
+.intro {
+    max-width: 800px;  /* Limit the width of the paragraph */
+    width: 90%;        /* Make it responsive within the max width */
+    text-align: center; /* Center align the text */
+    margin-top: 20px;
+    margin-bottom: 50px;
     font-size: 1.2em;
     line-height: 1.7;
-    font-family: 'Roboto', sans-serif; /* Clean and modern font */
-    letter-spacing: 0.5px; /* Slight space between letters for readability */
-    color: #f5f5f5; /* Slightly off-white for better contrast */
-}
-h1 {
-    text-align: center;        /* Center the text */
-    margin-top: -85px;         /* Move the title upwards (adjust as needed) */
-    font-size: 3em;            /* Optional: Increase the font size */
-    color: #00ff99;            /* Neon green color */
-    text-shadow: 0 0 10px #00ff99, 0 0 10px #00ff99; /* Optional: Add a glowing neon effect */
 }
 
 header nav ul li a {
-    color: bold white; /* Neon green color */
-    text-decoration: none; /* Remove underline */
+    color: white; /* Fixed issue with color declaration */
+    text-decoration: none;
     font-weight: bold;
-    padding: 10px 20px; /* Add padding around the text */
-    border: 2px solid transparent; /* Initial border (invisible) */
-    border-radius: 5px; /* Rounded corners */
-    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
-/* Hover effect for buttons */
 header nav ul li a:hover {
-    background-color: #00ff99; /* Background color on hover */
-    color: #333; /* Change text color on hover */
-    border-color: #00ff99; /* Border color on hover */
-    box-shadow: 0 0 10px rgba(0, 255, 153, 0.5); /* Glowing effect on hover */
+    background-color: #00ff99;
+    color: #333;
+    border-color: #00ff99;
+    box-shadow: 0 0 10px rgba(0, 255, 153, 0.5);
 }
 
-.contact-info {
-    text-align: left;
-    margin-top: 55px; /* Add space between the icons and the text */
+@media screen and (max-width: 1024px) {
+    .project-box {
+        width: 45%;
+    }
+
+    /* Reduce text size for smaller screens */
+    h1 {
+        font-size: 40px;
+    }
+
+    p.intro {
+        font-size: 14px;
+    }
 }
 
-.contact-info .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: -10px; /* Reduce space between the text and the icons */
-    margin-bottom: 110px; /* Space below icons to maintain some distance */
+@media screen and (max-width: 768px) {
+    .project-box {
+        width: 100%;
+    }
+
+    .projects {
+        justify-content: center;
+    }
+
+    /* Significantly reduce text size on very small screens */
+    h1 {
+        font-size: 30px;
+    }
+
+    p.intro {
+        font-size: 12px;
+        margin-top: 20px;
+    }
+
+    footer p {
+        font-size: 10px;
+    }
+
+    .social-icons a {
+        font-size: 10px;
+    }
 }
+
+
+
 
 
