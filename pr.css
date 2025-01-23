@@ -1,0 +1,249 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-image: url('front.jpeg'); /* Ensure you have the correct path for your background image */
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* This keeps the background fixed when scrolling */
+    padding-top: 80px;
+    padding-bottom: 60px;
+    min-height: 100vh;
+}
+
+header {
+    background-color: rgba(51, 51, 51, 1); /* Dark background with slight transparency */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Ensure header is above the background */
+    box-sizing: border-box; /* Prevents padding from affecting width */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #333; /* Dark background for footer */
+    color: white;
+    text-align: left;
+    padding: 3px 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+footer img.footer-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #00ff99;
+    padding: 2px;
+    box-sizing: border-box;
+    margin-top: 2px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+    margin-left: -5px;
+}
+
+/* Social icons styles */
+footer .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+    margin-top: 5px;
+    justify-content: flex-end;
+    position: absolute;
+    right: 20px;
+    bottom: 1px;
+}
+
+footer .social-icons a {
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #00ff99;
+    transform: scale(1.1);
+}
+
+
+/* Projects Section */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 40px;
+    justify-items: center;
+}
+
+/* Project Box */
+.project-box {
+    background-color: rgba(51, 51, 51, 0.8);
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    width: 100%; /* Ensures the box takes up the full width of its grid column */
+    max-width: 400px; /* Maximum width for consistency */
+    min-width: 400px; /* Minimum width to ensure the box is not too small */
+    height: 620px; 
+    box-shadow: 0 4px 10px rgba(0, 255, 153, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure content is spaced out */
+}
+
+.project-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 255, 153, 0.5);
+}
+
+/* Image inside the project box */
+.project-box img {
+    width: 100%; /* Make the image fill the width of the box */
+    height: 350px; /* Fixed height for uniform image size */
+    object-fit: cover; /* Ensures the image covers the space without distortion */
+    border-radius: 10px; /* Curved corners */
+    margin-bottom: -15px; /* Space between image and text */
+}
+
+/* Title inside the project box */
+.project-box h3 {
+    font-size: 1.5em;
+    color: #00ff99;
+    margin-bottom: -140px;
+    line-height: 1.2;
+    height: 45px; /* Fixed height for the title */
+    position: relative;
+    top: -60px; /* Move the title upwards */
+}
+
+/* Description inside the project box */
+.project-box p {
+    font-size: 1.1em;
+    color: #f5f5f5;
+    line-height: 1.5;
+    height: 75px; /* Set a fixed height for the description */
+    overflow: hidden; /* Hide text that overflows if the description is too long */
+    position: relative;
+    top: -40px; /* Move the title upwards */
+}
+
+/* Media Queries for responsiveness */
+
+/* Medium screens (Tablet) */
+@media (max-width: 768px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+
+    .project-box {
+        max-width: 90%; /* Adjust box width to be 90% of the container on medium screens */
+        min-width: 230px; /* Ensure the box doesn’t get too small */
+    }
+}
+
+/* Small screens (Mobile) */
+@media (max-width: 480px) {
+    .projects {
+        grid-template-columns: 1fr; /* 1 column on mobile screens */
+    }
+
+    .project-box {
+        max-width: 90%; /* Box takes up 90% width on small screens */
+        min-width: 200px; /* Ensure the box doesn't get too small */
+    }
+}
+
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .projects {
+        grid-template-columns: 1fr; /* 1 column on mobile screens */
+    }
+}
+
+/* Header and footer styles */
+h1 {
+    text-align: center;
+    margin-top: -20px;
+    font-size: 3em;
+    color: #00ff99;
+    text-shadow: 0 0 10px #00ff99, 0 0 10px #00ff99;
+}
+
+p {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 1.2em;
+    line-height: 1.9;
+}
+
+.intro {
+    max-width: 800px;  /* Limit the width of the paragraph */
+    width: 90%;        /* Make it responsive within the max width */
+    text-align: center; /* Center align the text */
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 1.2em;
+    line-height: 1.7;
+}
+
+header nav ul li a {
+    color: bold white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #00ff99;
+    color: #333;
+    border-color: #00ff99;
+    box-shadow: 0 0 10px rgba(0, 255, 153, 0.5);
+}

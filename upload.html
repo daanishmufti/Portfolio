@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Project</title>
+    <link rel="stylesheet" href="up.css">
+</head>
+<body>
+    <main>
+        <h1>Upload a New Project</h1>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="title">Project Title:</label>
+            <input type="text" id="title" name="title" required><br><br>
+
+            <label for="description">Project Description:</label>
+            <textarea id="description" name="description" required></textarea><br><br>
+
+            <label for="github_url">GitHub URL:</label>
+            <input type="url" id="github_url" name="github_url" required><br><br>
+
+            <label for="image">Upload Image:</label>
+            <input type="file" id="image" name="image" accept="image/*" required><br><br>
+
+            <button type="submit">Upload Project</button>
+        </form>
+    </main>
+</body>
+</html>

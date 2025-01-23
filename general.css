@@ -1,0 +1,170 @@
+/* general.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-image: url('front.jpeg'); /* Ensure you have the correct path for your background image */
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* This keeps the background fixed when scrolling */
+    padding-top: 80px;
+    padding-bottom: 60px;
+    min-height: 100vh;
+}
+
+
+header {
+    background-color: rgba(51, 51, 51, 1); /* Dark background with slight transparency */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Ensure header is above the background */
+    box-sizing: border-box; /* Prevents padding from affecting width */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #333; /* Dark background for footer */
+    color: white;
+    text-align: left; /* Align text to the left */
+    padding: 3px 10px; /* Keep padding small to maintain footer height */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex; /* Use flexbox to arrange the image and text in a row */
+    align-items: center; /* Vertically center the items */
+    justify-content: left; /* Align everything to the left */
+    height: 50px; /* Fixed height for the footer */
+    box-sizing: border-box; /* Ensure padding does not affect size */
+}
+
+footer img.footer-img {
+    width: 30px;         /* Set image size */
+    height: 30px;        /* Keep the image square */
+    border-radius: 50%;  /* Make the image circular */
+    border: 2px solid #00ff99; /* Thin green border */
+    padding: 2px;        /* Adds space between the image and the border */
+    box-sizing: border-box; /* Ensures the border is included in the total size of the element */
+    margin-top: 2px;     /* Slightly move the image upwards */
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px; /* Smaller font size for minimal footer height */
+    margin-left: -5px; /* Small gap between the image and the text */
+}
+
+/* Social icons styles */
+footer .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-left: auto; /* Pushes the icons to the right */
+}
+
+footer .social-icons a {
+    color: #fff;
+    font-size: 30px; /* Set a consistent icon size */
+    text-decoration: none;
+    transition: transform 0.3s ease; /* Smooth scale transition */
+}
+
+footer .social-icons a:hover {
+    color: #00ff99; /* Neon green on hover */
+    transform: scale(1.1); /* Slightly enlarge the icon */
+}
+
+
+
+main {
+   
+}
+
+section {
+    padding: 2rem;
+}
+
+.gradient-description {
+    background: linear-gradient(45deg, #1a1a1a, #333333); /* Dark gradient for a techy look */
+    color: #00ff99; /* Neon green-like text color for a tech feel */
+    border-radius: 12px;
+    padding: 20px;
+    text-align: left; /* Align text to the left for a modern feel */
+    max-width: 700px; /* Increase max-width for a wider box */
+    margin: 20px auto; /* Center the box */
+    box-shadow: 0 4px 10px rgba(0, 255, 153, 0.2); /* Soft neon glow effect */
+    border: 1px solid #00ff99; /* Border with the same neon green */
+}
+
+.gradient-description h4 {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for a tech look */
+    text-transform: uppercase; /* Uppercase for a more sleek and futuristic appearance */
+    letter-spacing: 1px; /* Space between the letters for a more technical feel */
+}
+
+.gradient-description p {
+    font-size: 1.2em;
+    line-height: 1.7;
+    font-family: 'Roboto', sans-serif; /* Clean and modern font */
+    letter-spacing: 0.5px; /* Slight space between letters for readability */
+    color: #f5f5f5; /* Slightly off-white for better contrast */
+}
+h1 {
+    text-align: center;        /* Center the text */
+    margin-top: -50px;         /* Move the title upwards (adjust as needed) */
+    font-size: 3em;            /* Optional: Increase the font size */
+    color: #00ff99;            /* Neon green color */
+    text-shadow: 0 0 10px #00ff99, 0 0 10px #00ff99; /* Optional: Add a glowing neon effect */
+}
+
+header nav ul li a {
+    color: bold white; /* Neon green color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    padding: 10px 20px; /* Add padding around the text */
+    border: 2px solid transparent; /* Initial border (invisible) */
+    border-radius: 5px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for buttons */
+header nav ul li a:hover {
+    background-color: #00ff99; /* Background color on hover */
+    color: #333; /* Change text color on hover */
+    border-color: #00ff99; /* Border color on hover */
+    box-shadow: 0 0 10px rgba(0, 255, 153, 0.5); /* Glowing effect on hover */
+}
+
+
+
+
+
+
+
