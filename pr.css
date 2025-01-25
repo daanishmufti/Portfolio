@@ -274,8 +274,17 @@ footer .social-icons a:hover {
 
 
 @media screen and (max-width: 1024px) {
-    .project-box {
-        width: 45%;
+    header nav ul {
+        justify-content: center; /* Keep items centered in row form */
+    }
+
+    header nav ul li {
+        margin: 0 10px; /* Reduced margin between links */
+    }
+
+    header nav ul li a {
+        font-size: 14px; /* Reduced button font size */
+        padding: 8px 16px; /* Adjusted padding for smaller buttons */
     }
 
     /* Reduce text size for smaller screens */
@@ -289,15 +298,12 @@ footer .social-icons a:hover {
 }
 
 @media screen and (max-width: 768px) {
-    .project-box {
-        width: 100%;
+    header nav ul li a {
+        font-size: 14px; /* Smaller button font size */
+        padding: 8px 15px; /* Adjust padding for mobile */
     }
 
-    .projects {
-        justify-content: center;
-    }
-
-    /* Significantly reduce text size on very small screens */
+    /* Reduce text size on very small screens */
     h1 {
         font-size: 30px;
     }
@@ -313,6 +319,27 @@ footer .social-icons a:hover {
 
     .social-icons a {
         font-size: 10px;
+    }
+
+    .gradient-description {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header nav ul li a {
+        font-size: 12px; /* Further reduced font size for very small screens */
+        padding: 6px 12px; /* Even smaller padding */
+    }
+
+    footer {
+        text-align: center;  /* Center the footer items on small screens */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .social-icons {
+        margin-top: 10px;
     }
 }
 
