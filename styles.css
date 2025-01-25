@@ -30,10 +30,12 @@ header {
     box-sizing: border-box;
 }
 
+/* Navigation Styling */
 header nav ul {
     list-style: none;
     padding: 0;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
 }
 
 header nav ul li {
@@ -42,7 +44,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: white; /* Corrected color */
+    color: white;
     text-decoration: none;
     font-weight: bold;
     padding: 10px 20px;
@@ -58,6 +60,7 @@ header nav ul li a:hover {
     box-shadow: 0 0 10px rgba(0, 255, 153, 0.5);
 }
 
+/* Footer Styling */
 footer {
     background-color: #333;
     color: white;
@@ -90,7 +93,7 @@ footer p {
     margin-left: -5px;
 }
 
-/* Social icons styles */
+/* Social Icons Styling */
 footer .social-icons {
     display: flex;
     gap: 15px;
@@ -175,8 +178,6 @@ footer .social-icons a:hover {
     top: -40px; /* Move the title upwards */
 }
 
-
-
 /* Header and footer styles */
 h1 {
     text-align: center;
@@ -204,7 +205,7 @@ p {
 }
 
 header nav ul li a {
-    color: white; /* Fixed issue with color declaration */
+    color: white;
     text-decoration: none;
     font-weight: bold;
     padding: 10px 20px;
@@ -220,9 +221,31 @@ header nav ul li a:hover {
     box-shadow: 0 0 10px rgba(0, 255, 153, 0.5);
 }
 
+.contact-info {
+    font-size: 1.1em; /* Slightly larger text for better readability */
+    margin-top: 65px;
+    margin-bottom: 40px;
+
+}
+
+/* Media Queries for responsiveness */
 @media screen and (max-width: 1024px) {
     .project-box {
         width: 45%;
+    }
+
+    header nav ul {
+        flex-direction: row; /* Ensure buttons stay in row */
+        justify-content: center; /* Center the navigation items */
+    }
+
+    header nav ul li {
+        margin: 0 10px; /* Reduced margin for smaller screens */
+    }
+
+    header nav ul li a {
+        font-size: 14px; /* Smaller font size for buttons */
+        padding: 8px 16px; /* Reduced padding for buttons */
     }
 
     /* Reduce text size for smaller screens */
@@ -232,6 +255,10 @@ header nav ul li a:hover {
 
     p.intro {
         font-size: 14px;
+    }
+
+    .contact-info {
+        font-size: 1em; /* Slightly smaller font size on smaller screens */
     }
 }
 
@@ -244,7 +271,13 @@ header nav ul li a:hover {
         justify-content: center;
     }
 
-    /* Significantly reduce text size on very small screens */
+    /* Adjust button sizes for smaller screens */
+    header nav ul li a {
+        font-size: 14px; /* Smaller button font size */
+        padding: 8px 15px; /* Adjust padding for mobile */
+    }
+
+    /* Reduce text size on very small screens */
     h1 {
         font-size: 30px;
     }
@@ -261,9 +294,30 @@ header nav ul li a:hover {
     .social-icons a {
         font-size: 10px;
     }
+
+    .contact-info {
+        font-size: 0.95em; /* Smaller font size for mobile screens */
+    }
 }
 
+@media screen and (max-width: 480px) {
+    header nav ul li a {
+        font-size: 12px; /* Further reduced font size for very small screens */
+        padding: 6px 12px; /* Even smaller padding */
+    }
 
+    footer {
+        text-align: center;  /* Center the footer items on small screens */
+        flex-direction: column;
+        align-items: center;
+    }
 
+    footer .social-icons {
+        margin-top: 10px;
+    }
 
+    .contact-info {
+        font-size: 0.85em; /* Even smaller font size on very small screens */
+    }
+}
 
