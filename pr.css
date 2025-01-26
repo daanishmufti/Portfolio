@@ -250,6 +250,7 @@ footer p {
     margin: 0;
     font-size: 16px;
     margin-left: -5px;
+    margin-top: -12px;
 }
 
 footer .social-icons {
@@ -258,6 +259,7 @@ footer .social-icons {
     margin-left: auto; /* Push icons to the right */
     justify-content: flex-end;
     position: relative;
+    margin-top: -12px;
 }
 
 footer .social-icons a {
@@ -324,6 +326,12 @@ footer .social-icons a:hover {
     .gradient-description {
         padding: 15px;
     }
+
+    footer p {
+        margin-top: -5px;
+        margin-left: -5px;
+    }
+    
 }
 
 @media screen and (max-width: 480px) {
@@ -336,6 +344,17 @@ footer .social-icons a:hover {
         text-align: center;  /* Center the footer items on small screens */
         flex-direction: column;
         align-items: center;
+    }
+
+    footer .social-icons {
+        display: flex;
+        gap: 15px;
+        margin-left: auto;
+        margin-top: 5px;
+        justify-content: flex-end;
+        position: absolute;
+        right: 20px;
+        bottom: 7.5px;
     }
 
     footer .social-icons {
