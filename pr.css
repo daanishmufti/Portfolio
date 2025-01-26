@@ -331,6 +331,21 @@ footer .social-icons a:hover {
         margin-top: -5px;
         margin-left: -5px;
     }
+
+    footer .social-icons {
+        display: flex;
+        gap: 15px;
+        margin-left: auto;
+        margin-top: 5px;
+        justify-content: flex-end;
+        position: absolute;
+        right: 20px;
+        bottom: 7.5px;
+    }
+
+    footer .social-icons {
+        margin-top: 10px;
+    }
     
 }
 
