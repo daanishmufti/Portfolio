@@ -35,38 +35,10 @@
                 padding-top: 80px;
                 padding-bottom: 60px;
                 min-height: 100vh;
+                display: flex; /* Enable flexbox */
+                justify-content: center; /* Center horizontally */
+                align-items: center; /* Center vertically */
             }
-
-            header {
-                background-color: rgba(51, 51, 51, 0.8);
-                color: white;
-                padding: 1rem;
-                text-align: center;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                z-index: 10;
-                box-sizing: border-box;
-            }
-
-            header nav ul {
-                list-style: none;
-                padding: 0;
-            }
-
-            header nav ul li {
-                display: inline;
-                margin: 0 20px;
-            }
-
-            header nav ul li a {
-                color: white;
-                text-decoration: none;
-                font-weight: bold;
-                font-family: 'Roboto', sans-serif;
-            }
-
             /* Main content area */
             main {
                 text-align: center;
@@ -139,10 +111,25 @@
                     color: #00ff99; /* Change color on hover */
                 }
 
-                @media only screen and (max-width: 600px) {
+                @media only screen and (max-width: 380px) {
                 footer {
                     flex-direction: row;
                     text-align: left;
+                }
+
+                .techy-box {
+                    padding: 20px; /* Less padding */
+                    width: 180px; /* Make the box take up most of the screen width on mobile */
+                }
+
+                .techy-box h4 {
+                    font-size: 1.2em; /* Smaller subheading size */
+                }
+
+                .techy-box p {
+                    font-size: 0.7em;
+                    line-height: 1.8;
+                    color: #f5f5f5;
                 }
             }
 
@@ -159,17 +146,17 @@
 
             <p>My expertise spans not just software but also hardware engineering. I have worked extensively with <strong>Arduino</strong>, <strong>Raspberry Pi</strong>, and various hardware components such as ICs, chips, actuators, and sensors. These projects allow me to combine both software and hardware for innovative solutions, bridging the gap between the digital and physical world.</p>
 
-            <p>In the field of **Game Development**, I have experience using **C++** along with the **SFML library** for creating games and interactive applications. I have worked on projects that involve game mechanics, graphics handling, and user input processing. Some notable projects include:</p>
-            <ul>
-                <li><strong>Game Development:</strong> Using **C++** and **SFML**, I developed interactive 2D games that focus on graphics and real-time game mechanics. These projects improved my understanding of game loops, rendering, and physics simulations.</li>
-                <li><strong>OpenCV-based Projects:</strong> I have integrated **OpenCV** into my projects for image processing tasks such as <strong>Attendance Systems</strong> using face recognition and <strong>Mask Detection Systems</strong> to detect whether individuals are wearing a mask. These systems combine **C++** and **OpenCV** to analyze images and provide real-time results.</li>
-            </ul>
-            <ul>
-                <li><strong>Image Processing:</strong> I have applied various image processing techniques such as edge detection, segmentation, and noise reduction using **OpenCV** to analyze images and process visual data.</li>
-                <li><strong>Clustering Data:</strong> I have implemented clustering algorithms such as **K-Means**, **DBSCAN**, and **Hierarchical Clustering** to analyze large datasets, identify patterns, and group similar data points. These techniques are often used in applications like customer segmentation, anomaly detection, and image analysis.</li>
-            </ul>
+            <p>In the field of <strong>Game Development</strong>, I have experience using <strong>C++</strong> along with the <strong>SFML library</strong> for creating games and interactive applications. I have worked on projects that involve game mechanics, graphics handling, and user input processing. Some notable projects include:</p>
 
-            </ul><li><strong>Statistical Programs:</strong> Developed a student grading system using **Pandas** for data manipulation and **Matplotlib** for data visualization, enabling analysis of student performance and generating insightful reports.</li>
+            <p><strong>Game Development:</strong> Using <strong>C++</strong> and <strong>SFML</strong>, I developed interactive 2D games that focus on graphics and real-time game mechanics. These projects improved my understanding of game loops, rendering, and physics simulations.</p>
+            <p><strong>OpenCV-based Projects:</strong> I have integrated <strong>OpenCV</strong> into my projects for image processing tasks such as <strong>Attendance Systems</strong> using face recognition and <strong>Mask Detection Systems</strong> to detect whether individuals are wearing a mask. These systems combine <strong>C++</strong> and <strong>OpenCV</strong> to analyze images and provide real-time results.</p>
+            
+            <p><strong>Statistical Programs:</strong> Developed a student grading system using <strong>Pandas</strong> for data manipulation and <strong>Matplotlib</strong> for data visualization, enabling analysis of student performance and generating insightful reports.</p>
+            
+            <p><strong>Image Processing:</strong> I have applied various image processing techniques such as edge detection, segmentation, and noise reduction using <strong>OpenCV</strong> to analyze images and process visual data.</p>
+            
+            <p><strong>Clustering Data:</strong> I have implemented clustering algorithms such as <strong>K-Means</strong>, <strong>DBSCAN</strong>, and <strong>Hierarchical Clustering</strong> to analyze large datasets, identify patterns, and group similar data points. These techniques are often used in applications like customer segmentation, anomaly detection, and image analysis.</p>
+            
 
             </ul>
             <p></p>
