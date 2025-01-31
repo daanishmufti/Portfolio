@@ -104,35 +104,18 @@
             text-shadow: 0 0 10px #00ff99, 0 0 25px #00ff99, 0 0 50px #00ff99;
         }
 
-        @media only screen and (max-width: 600px) {
-                footer {
-                    flex-direction: row;
-                    text-align: left;
-                }
-                .techie-box {
-                    background-color: #333;
-                    border: 2px solid #00ff99;
-                    padding: 20px; /* Reduced padding for a more compact box */
-                    margin: 40px auto;
-                    max-width: 270px; /* Further reduced max-width */
-                    border-radius: 8px;
-                    text-align: left;
-                    color: white;
-                } 
-
-                .techie-box h2 {
-                    color: #00ff99;
-                    font-size: 20px; /* Reduced font size for the heading */
-                    margin-bottom: 10px; /* Reduced margin to make the heading closer to the text */
-                }
-
-                .techie-box p {
-                    font-size: 10px; /* Reduced font size for the paragraph */
-                    line-height: 1.4; /* Reduced line-height to fit more text in the box */
-                }
-
-            }
-
+        @media screen and (max-width: 380px) {
+            .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 20px 0;
+        }
+        .contact-info {
+            margin: 0; /* Remove any default margin */
+            padding: 0; /* Remove any default padding */
+        }
+        }
 
     </style>
 </head>
@@ -174,7 +157,7 @@
                 <a href="https://www.facebook.com/profile.php?id=100073440296946" target="_blank" title="Click to open my Facebook profile">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="mailto:daanishmufti@gmail.com" target="_blank" title="Click to send me an email">
+                <a href="mailto:daanish.mufti@gmail.com" target="_blank" title="Click to send me an email">
                     <i class="fas fa-envelope"></i>
                 </a>
                 <a href="https://www.google.com/maps?q=34.06916962357048,72.64412803584531" target="_blank" title="Click to view my pinned location on Google Maps">
@@ -183,8 +166,8 @@
             </div>
 
             <p class="contact-info">
-                <strong>&nbsp&nbsp&nbsp&nbspEmail:</strong> <a href="mailto:daanishmufti@gmail.com">daanishmufti@gmail.com</a><br>
-                <strong>&nbsp&nbsp&nbsp&nbspLocation:</strong> <a href="https://www.google.com/maps?q=34.06916962357048,72.64412803584531" target="_blank">Click here to view my location on Google Maps</a>
+                <strong>&nbsp&nbsp&nbsp&nbspEmail:</strong> <a href="mailto:daanish.mufti@gmail.com">daanish.mufti@gmail.com</a><br>
+                <strong>&nbsp&nbsp&nbsp&nbspLocation:</strong> <a href="https://www.google.com/maps?q=34.06916962357048,72.64412803584531" target="_blank">Click to View location</a>
             </p>
         </section>
     </main>
