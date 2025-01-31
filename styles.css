@@ -204,23 +204,6 @@ p {
     line-height: 1.7;
 }
 
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: 2px solid transparent;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-header nav ul li a:hover {
-    background-color: #00ff99;
-    color: #333;
-    border-color: #00ff99;
-    box-shadow: 0 0 10px rgba(0, 255, 153, 0.5);
-}
-
 .contact-info {
     font-size: 1.1em; /* Slightly larger text for better readability */
     margin-top: 65px;
@@ -271,8 +254,20 @@ header nav ul li a:hover {
         justify-content: center;
     }
 
-    /* Adjust button sizes for smaller screens */
+    header nav ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    header nav ul li {
+        display: inline;
+        margin: 0 10px;
+    }
+    
     header nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
         font-size: 14px; /* Smaller button font size */
         padding: 8px 15px; /* Adjust padding for mobile */
     }
@@ -298,26 +293,73 @@ header nav ul li a:hover {
     .contact-info {
         font-size: 0.95em; /* Smaller font size for mobile screens */
     }
+    
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 350px) {
+    header nav ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    header nav ul li {
+        display: inline;
+        margin: 0 -5px;
+    }
+    
     header nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
         font-size: 12px; /* Further reduced font size for very small screens */
         padding: 6px 12px; /* Even smaller padding */
     }
 
     footer {
-        text-align: center;  /* Center the footer items on small screens */
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    footer .social-icons {
+        display: flex;
+        gap: 15px;
+        justify-content: center; /* Centers the icons */
+        margin-top: 10px;
+        position: absolute;
+        right: 0; /* Remove the right positioning to center them */
+        left: 0;  /* Ensure it spans the entire width */
+        bottom: 7.5px;
+    }
+    
+    footer .social-icons {
+        margin-top: 10px;
     }
 
-    footer .social-icons {
+    footer p {
+        font-size: 10px;
+        display: none;
+    }
+
+    footer .social1-icons {
+        display: flex;
+        gap: 15px;
+        justify-content: center; /* Centers the icons */
+        margin-top: 10px;
+        position: absolute;
+        right: 0; /* Remove the right positioning to center them */
+        left: 0;  /* Ensure it spans the entire width */
+        bottom: 7.5px;
+    }
+    
+    footer .social1-icons {
         margin-top: 10px;
     }
 
     .contact-info {
         font-size: 0.85em; /* Even smaller font size on very small screens */
     }
+    
 }
+
+
 
