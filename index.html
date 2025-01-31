@@ -14,6 +14,9 @@
             margin: 0;
             padding: 0;
             background-color: #222;
+            display: flex; /* Enable flexbox */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
         }
 
         h1, p {
@@ -83,47 +86,6 @@
             color: #00ff99; /* Change color on hover */
         }
 
-        /* Mobile view adjustments */
-        @media only screen and (max-width: 600px) {
-            h1 {
-                font-size: 36px;
-            }
-
-            p {
-                font-size: 18px;
-            }
-
-            .gradient-description h4 {
-                font-size: 28px;
-            }
-
-            .gradient-description p {
-                font-size: 16px;
-            }
-
-            /* Stacking layout for smaller screens */
-            .content {
-                display: block;
-                text-align: center;
-            }
-
-            .content img {
-                width: 210px;
-                height: 210px;
-            }
-
-            .social-icons {
-                flex-direction: row;
-                gap: 10px;
-            }
-
-            footer {
-                flex-direction: row;
-                text-align: left;
-            }
-        }
-
-        /* Tablet view adjustments (for medium screens like tablets) */
         @media only screen and (max-width: 768px) {
             h1 {
                 font-size: 42px;
@@ -152,6 +114,46 @@
             .content img {
                 width: 320px;
                 height: 320px;
+            }
+            
+        }
+
+        @media only screen and (max-width: 380px) {
+            h1 {
+                font-size: 36px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            .gradient-description h4 {
+                font-size: 28px;
+            }
+
+            .gradient-description p {
+                font-size: 16px;
+            }
+
+            /* Stacking layout for smaller screens */
+            .content {
+                display: block;
+                text-align: center;
+            }
+
+            .content img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .social-icons {
+                flex-direction: row;
+                gap: 10px;
+            }
+
+            footer {
+                flex-direction: row;
+                text-align: left;
             }
         }
 
