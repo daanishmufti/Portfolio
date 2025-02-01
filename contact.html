@@ -3,29 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Daanish Ahmad Mufti</title>
+    <title>Contact Me - Your Name</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="him.ico" type="image/png">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <style>
-            /* Reset some basic styles */
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-
-            body {
+    <style>
+        body {
                 font-family: Arial, sans-serif;
                 background-color: #1a1a1a;
                 color: white;
@@ -39,136 +22,169 @@
                 justify-content: center; /* Center horizontally */
                 align-items: center; /* Center vertically */
             }
-            /* Main content area */
-            main {
-                text-align: center;
-                padding: 50px;
-            }
 
-            h1 {
-                font-family: Arial, sans-serif;
-                font-size: 48px;
-                color: #00ff99;  /* Neon green color */
-                text-shadow: 0 0 10px #00ff99;
-                margin-bottom: 20px;
-            }
+        .contact-section {
+            text-align: center;
+            margin: 40px 0;
+        }
 
-            p {
-                font-family: Arial, sans-serif;
-                font-size: 24px;
-                line-height: 1.6;
-                color: #f5f5f5;
-                margin-bottom: 30px;
-            }
+        .contact-section p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: white;
+        }
 
-            /* Techy styled box with no white background */
-            .techy-box {
-                background: rgba(0, 0, 0, 0.7); /* Dark transparent background */
-                border-radius: 15px;
-                padding: 20px;
-                max-width: 800px;
-                margin: 0 auto;
-                box-shadow: 0 4px 15px rgba(0, 255, 153, 0.3); /* Neon glowing effect */
-                border: 2px solid #00ff99;
-                text-align: center;
-            }
+        /* Techie Box Styles */
+        .techie-box {
+            background-color: #333;
+            border: 2px solid #00ff99;
+            padding: 20px;
+            margin: 40px auto;
+            max-width: 800px;
+            border-radius: 8px;
+            text-align: left;
+            color: white;
+        }
 
-            .techy-box h4 {
-                font-family: 'Courier New', Courier, monospace;
-                font-size: 1.8em;
-                color: #00ff99;
-                margin-bottom: 20px;
-            }
+        .techie-box h2 {
+            color: #00ff99;
+            font-size: 28px;
+        }
 
-            .techy-box p {
-                font-family: 'Roboto', sans-serif;
-                font-size: 1.2em;
-                line-height: 1.8;
-                color: #f5f5f5;
-            }
+        .techie-box p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
 
-            footer {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    padding: 20px;
-                    background-color: #333;
-                }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
 
-                .social-icons {
-                    display: flex;
-                    gap: 15px;
-                }
+        .social-icons a {
+            color: #00ff99;
+            font-size: 30px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
 
-                .social-icons a {
-                    color: #fff;
-                    font-size: 24px;
-                    text-decoration: none;
-                    transition: color 0.3s;
-                }
+        .social-icons a:hover {
+            color: #00ff99;
+            transform: scale(1.1);
+        }
 
-                .social-icons a:hover {
-                    color: #00ff99; /* Change color on hover */
-                }
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+        }
 
-                @media only screen and (max-width: 360px) {
-                footer {
-                    flex-direction: row;
-                    text-align: left;
-                }
+        .social1-icons {
+            display: flex;
+            gap: 15px;
+            margin-left: auto;
+        }
 
-                .techy-box {
-                    padding: 20px; /* Less padding */
-                    width: 180px; /* Make the box take up most of the screen width on mobile */
-                }
+        .social1-icons a {
+            color: #fff;
+            font-size: 30px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
 
-                .techy-box h4 {
-                    font-size: 1.2em; /* Smaller subheading size */
-                }
+        .social1-icons a:hover {
+            color: #00ff99;
+            transform: scale(1.1);
+        }
 
-                .techy-box p {
-                    font-size: 0.7em;
-                    line-height: 1.8;
-                    color: #f5f5f5;
-                }
-            }
+        
+        .contact-info a {
+            color: #00ff99;  
+            text-decoration: none;
+            text-shadow: 0 0 8px #00ff99;, 0 0 20px #00ff99;, 0 0 40px color: #00ff99; /* Glowing effect */
+            transition: text-shadow 0.3s ease, color 0.3s ease;
+        }
 
+        .contact-info a:hover {
+            color: #00ff99;  
+            text-shadow: 0 0 10px #00ff99, 0 0 25px #00ff99, 0 0 50px #00ff99;
+        }
 
-        </style>
+        @media screen and (max-width: 380px) {
+            .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 20px 0;
+        }
+        .contact-info {
+            margin: 0; /* Remove any default margin */
+            padding: 0; /* Remove any default padding */
+        }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <div class="techy-box">
-            <h4>About Me</h4>
-            <p>Hello! My name is <strong>Daanish Ahmad Mufti</strong>, and I am a <strong>Bachelor's student in Computer Science</strong> at <strong>Ghulam Ishaq Khan Institute of Engineering Sciences and Technology (GIKI)</strong>, Pakistan. Although I am currently living in Pakistan, I am originally from the United Kingdom. My background allows me to connect with a diverse range of cultures and work environments.</p>
+        <section class="contact-section">
+            <h1>Contact Me</h1>
+            <p>If you'd like to get in touch with me, feel free to reach out through any of the options below:</p>
+        </section>
 
-            <p>I am passionate about software development, hardware engineering, and technology. I have hands-on experience with various programming languages, including <strong>Python, C, C++</strong>, and databases like <strong>PostgreSQL</strong> and <strong>MongoDB</strong>. In addition to this, I have developed web applications using <strong>HTML</strong>, <strong>CSS</strong>, and several frameworks.</p>
-
-            <p>My expertise spans not just software but also hardware engineering. I have worked extensively with <strong>Arduino</strong>, <strong>Raspberry Pi</strong>, and various hardware components such as ICs, chips, actuators, and sensors. These projects allow me to combine both software and hardware for innovative solutions, bridging the gap between the digital and physical world.</p>
-
-            <p>In the field of <strong>Game Development</strong>, I have experience using <strong>C++</strong> along with the <strong>SFML library</strong> for creating games and interactive applications. I have worked on projects that involve game mechanics, graphics handling, and user input processing. Some notable projects include:</p>
-
-            <p><strong>Game Development:</strong> Using <strong>C++</strong> and <strong>SFML</strong>, I developed interactive 2D games that focus on graphics and real-time game mechanics. These projects improved my understanding of game loops, rendering, and physics simulations.</p>
-            <p><strong>OpenCV-based Projects:</strong> I have integrated <strong>OpenCV</strong> into my projects for image processing tasks such as <strong>Attendance Systems</strong> using face recognition and <strong>Mask Detection Systems</strong> to detect whether individuals are wearing a mask. These systems combine <strong>C++</strong> and <strong>OpenCV</strong> to analyze images and provide real-time results.</p>
-            
-            <p><strong>Statistical Programs:</strong> Developed a student grading system using <strong>Pandas</strong> for data manipulation and <strong>Matplotlib</strong> for data visualization, enabling analysis of student performance and generating insightful reports.</p>
-            
-            <p><strong>Image Processing:</strong> I have applied various image processing techniques such as edge detection, segmentation, and noise reduction using <strong>OpenCV</strong> to analyze images and process visual data.</p>
-            
-            <p><strong>Clustering Data:</strong> I have implemented clustering algorithms such as <strong>K-Means</strong>, <strong>DBSCAN</strong>, and <strong>Hierarchical Clustering</strong> to analyze large datasets, identify patterns, and group similar data points. These techniques are often used in applications like customer segmentation, anomaly detection, and image analysis.</p>
-            
-
-            </ul>
-            <p></p>
-            <p>Currently, I am seeking an internship or job opportunity in the UK, where I can apply my skills in real-world scenarios and continue to grow professionally. I am highly adaptable and open to various work environments, and I am willing to relocate if necessary. I have experience living in a hostel and am comfortable adjusting to different living conditions. My goal is to contribute to innovative projects and further develop my technical expertise in a dynamic team.</p>
-
-            <p>This portfolio website showcases some of my work. Feel free to explore my projects and get in touch if you are interested in collaborating or offering opportunities in your organization!</p>
+        <!-- Techie Box with Description -->
+        <div class="techie-box">
+            <h2>How You Can Reach Me</h2>
+            <p>
+                I’m always happy to collaborate on exciting projects or discuss new opportunities.
+                You can contact me via email, LinkedIn, or through any of the social media platforms listed below.
+                You can also find my location on Google Maps if you'd like to meet in person.
+            </p>
         </div>
+
+        <section class="contact-info">
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/daanish-mufti-1451a0290/" target="_blank" title="Click to open my LinkedIn profile">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com/daanish_mufti/" target="_blank" title="Click to open my Instagram profile">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100073440296946" target="_blank" title="Click to open my Facebook profile">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="mailto:daanish.mufti@gmail.com" target="_blank" title="Click to send me an email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.google.com/maps?q=34.06916962357048,72.64412803584531" target="_blank" title="Click to view my pinned location on Google Maps">
+                    <i class="fas fa-map-marker-alt"></i>
+                </a>                
+            </div>
+
+            <p class="contact-info">
+                <strong>&nbsp&nbsp&nbsp&nbspEmail:</strong> <a href="mailto:daanish.mufti@gmail.com">daanish.mufti@gmail.com</a><br>
+                <strong>&nbsp&nbsp&nbsp&nbspLocation:</strong> <a href="https://www.google.com/maps?q=34.06916962357048,72.64412803584531" target="_blank">Click to View location</a>
+            </p>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Daanish Ahmad Mufti</p>
-        <div class="social-icons">
+        <div class="social1-icons">
             <a href="https://www.linkedin.com/in/daanish-mufti-1451a0290/" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://www.instagram.com/daanish_mufti/" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://www.facebook.com/profile.php?id=100073440296946" target="_blank"><i class="fab fa-facebook"></i></a>
